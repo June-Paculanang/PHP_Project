@@ -1,0 +1,321 @@
+
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+   
+	background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Light gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 500px; /* Width of the box */
+    background: #f4e8ff; /* Light purple background */
+    padding: 40px;
+    border-radius: 20px; /* Rounded corners for the box */
+    box-shadow: 0 12px 25px rgba(128, 0, 128, 0.2); /* Soft purple shadow for a boxy effect */
+    margin: 40px auto; /* Center the box horizontally and add space from other elements */
+    font-family: 'Poppins', sans-serif; /* Cute, clean font */
+    text-align: center; /* Center align the text inside */
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-size: 28px; /* Larger heading text */
+    color: #6a0dad; /* Deep purple text */
+    margin-bottom: 20px; /* Space below headings */
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(128, 0, 128, 0.1); /* Subtle shadow for headings */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 20px; /* Space between form elements */
+}
+
+/* Label Styles */
+label {
+    text-align: left;
+    font-size: 16px; /* Larger text for labels */
+    font-weight: bold;
+    color: #8a4dbf; /* Lavender color for labels */
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%; /* Full width of the container */
+    padding: 14px;
+    border: 2px solid #d9b3f7; /* Lavender border */
+    border-radius: 10px; /* Rounded edges */
+    background: #ffffff; /* White background for inputs */
+    font-size: 16px; /* Readable font size */
+    box-shadow: inset 0 4px 6px rgba(128, 0, 128, 0.1); /* Subtle inset shadow */
+    transition: all 0.3s; /* Smooth transitions */
+}
+
+/* Focus Effect for Inputs */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #c68ae8; /* Highlighted border on focus */
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.3); /* Glow effect on focus */
+}
+
+/* Button Styling */
+button {
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #ff85c0, #d693f9); /* Pink-to-purple gradient */
+    border: none;
+    border-radius: 12px; /* Rounded button */
+    color: #fff; /* White text */
+    font-size: 18px; /* Larger button text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 8px 15px rgba(255, 94, 155, 0.3); /* Button shadow */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(90deg, #d693f9, #ff85c0); /* Reverse gradient */
+    transform: scale(1.05); /* Pop-out effect */
+    box-shadow: 0 10px 20px rgba(255, 94, 155, 0.4); /* Brighter shadow */
+}
+
+/* Paragraph Text */
+p {
+    font-size: 16px; /* Slightly larger paragraph text */
+    color: #8a4dbf; /* Lavender text color */
+}
+
+/* Links */
+a {
+    color: #c68ae8; /* Soft purple link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 16px; /* Larger font size for links */
+}
+
+/* Link Hover Effect */
+a:hover {
+    color: #ff85c0; /* Pink on hover */
+}
+
+/* Decorative Bottom Border */
+.container::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 50%;
+    margin: 20px auto 0;
+    background: linear-gradient(90deg, #ff85c0, #f4e8ff, #6a0dad);
+    border-radius: 3px; /* Rounded decorative border */
+}
+
+
+/* Error Messages */
+.error-message {
+    background: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #ffc0cb; /* Light pink background */
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Home page - categories */
+.categories {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.categories h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Category container */
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Category links */
+.category {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the content vertically */
+    width: 120px; /* Icon box size */
+    height: 120px; /* Icon box size */
+    padding: 10px;
+    background-color: #d8b0e1; /* Light purple */
+    border-radius: 16px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center; /* Ensures text is centered horizontally */
+}
+
+/* Icon styles */
+.icon {
+    width: 40px; /* Fixed icon size */
+    height: 40px;
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: transform 0.5s ease-in-out; /* Added transition for smooth rotation */
+}
+
+/* Text for the categories */
+.category span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover effect for category */
+.category:hover {
+    background-color:  #ff69b4; /* Slightly darker purple */
+    transform: scale(1.1);
+}
+
+/* Hover effect for the icon - Twirl effect */
+.category:hover .icon {
+    transform: rotate(360deg); /* Rotate the icon 360 degrees */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .category {
+        width: 100px; /* Smaller icons on mobile */
+        height: 100px; /* Smaller icons on mobile */
+    }
+
+    .icon {
+        width: 30px; /* Smaller icons on mobile */
+        height: 30px; /* Smaller icons on mobile */
+    }
+
+    .category span {
+        font-size: 12px; /* Smaller text on mobile */
+    }
+}
+
+/* Container for the activity feed */
+.activity-feed-container {
+    margin: 20px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for each post container */
+.post-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #f5f5dc, #d8a7ca);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Post image styling */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px; /* Ensures the image doesn't take up too much space */
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Navigation bar styles */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    background-color:#d1c4e9;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: #d1c4e9;
+    color: white;
+}
+
+/* Headings and text styles */
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #444;
+}
